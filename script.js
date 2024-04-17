@@ -1,13 +1,22 @@
-
 function display() {
     let tLec = document.getElementById("tLec").value;
     let tAtt = document.getElementById("tAtt").value;
     let rAtt = document.getElementById("rAtt").value;
+
     let resAtt = document.getElementById("resAtt");
     let absent = document.getElementById("absent");
     let status = document.getElementById("status");
     let canmiss = document.getElementById("canMiss");
     let Hastoattend = document.getElementById("attend");
+
+    resAtt.textContent='Attendence :';
+    absent.textContent ='Absent :';
+    status.textContent='Status :';
+    canmiss.textContent='Can miss:';
+    Hastoattend.textContent='Has to attend :'; 
+    
+
+
     let a= (tAtt/tLec)*100;
     let attendence= a.toPrecision(2);
     console.log(attendence);
