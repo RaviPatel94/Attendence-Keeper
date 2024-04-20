@@ -23,11 +23,11 @@
             <div class="content">
                 <div class="input">
                     <div>Total lectures</div>
-                    <div> <input type="number" id="tLec"></div>
+                    <div> <input type="number" id="tLec" min="1" onkeypress="return event.charCode >= 48"></div>
                     <div>Total attended</div>
-                    <div><input type="number" id="tAtt"></div>
+                    <div><input type="number" id="tAtt" min="1" onkeypress="return event.charCode >= 48"></div>
                     <div>Required attendence</div>
-                    <div class="percentageinp"> <div><input type="number" name="" id="rAtt" value="75" > </div> <div>%</div></div>
+                    <div class="percentageinp"> <div><input type="number" name="" id="rAtt" value="75" min="1" max="100"> </div> <div>%</div></div>
                     
                     <div><button onclick="display()">Generate</button></div>
                 </div>
