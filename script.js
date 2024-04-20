@@ -20,12 +20,16 @@ function display() {
     let a= (tAtt/tLec)*100;
     let attendence= a.toPrecision(2);
     console.log(attendence);
-    resAtt.textContent += attendence + '%';
-    absent.textContent += tLec - tAtt + ' Lectures';
+
+    if(tAtt>tLec){
+        alert("Total attended can't be greater than Total lectures");
+    }
     
-    if (attendence > rAtt) {
+    else if (attendence > rAtt) {
         let attend=0;
         let miss=0;
+        resAtt.textContent += attendence + '%';
+        absent.textContent += tLec - tAtt + ' Lectures';
 
         while (attendence > rAtt) {
             miss +=1;
@@ -34,7 +38,7 @@ function display() {
             tAtt--;
             attendence = [(tAtt) / tLec] * 100;
         }
-
+        miss-=1;
         status.textContent += 'High';
         canmiss.textContent+=miss + " Lectures";
         Hastoattend.textContent+= attend+" Lectures";
@@ -44,6 +48,8 @@ function display() {
     else if (rAtt === attendence) {
         let attend=0;
         let miss=0;
+        resAtt.textContent += attendence + '%';
+        absent.textContent += tLec - tAtt + ' Lectures';
         status.textContent += 'On edge';
         canmiss.textContent+=miss + " Lectures";
         Hastoattend.textContent+= attend+" Lectures";
@@ -53,7 +59,10 @@ function display() {
     {
         let attend=0;
         let miss=0;
+        resAtt.textContent += attendence + '%';
+        absent.textContent += tLec - tAtt + ' Lectures';
         status.textContent += 'Low';
+
         
         while (attendence < rAtt) {
             attend +=1;
