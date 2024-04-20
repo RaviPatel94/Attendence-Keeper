@@ -69,11 +69,22 @@ input{
     cursor: pointer;
 }
 
+button:hover{
+    color: #ffffff;
+    background-color:  #29983B;
+    border-color: #ffffff;
+    transition: 0.2s;
+}
+
 .forgot{
     margin-left: 44px;
     padding-top: 3px;
     font-size: 18px;
     cursor: pointer;
+}
+
+.forgot:hover{
+    text-decoration: underline;
 }
 
 @media(max-width:638px ){
