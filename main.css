@@ -67,11 +67,32 @@ body{
     color: black;
 }
 
+.navtext {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .navtext:hover::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    border: 1px solid black;
+  }
+
 .home img{
     margin: 0;
     padding:0;
-    height: 55px;
-    padding-right:40px ;
+    height: 40px; 
+    margin-right: 40px;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+.home img:hover{
+    border-width: 3px;
+    border-color: rgb(168, 166, 166);
+    border-style: solid;
 }
 
 .content{
