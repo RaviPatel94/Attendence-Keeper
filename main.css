@@ -202,6 +202,7 @@ body{
 #contact p{
     font-size: 40px;
     display: flex;
+    margin-bottom: 32px;
 }
 
 form {
@@ -211,7 +212,7 @@ form {
 }
 
 form input{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     margin-top: 5px;
     width: 240px;
     height: 32px;
@@ -221,14 +222,14 @@ form input{
     display: block;
     font-size: 15px;
     padding-left: 10px;
-    padding-top: 2px;
+    margin-top: 2px;
 }
 
 form textarea{
     height: 100px;
     width: 240px;
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-size: 15px;
     padding-left: 10px;
     padding-top: 5px;
@@ -307,13 +308,17 @@ form button:hover{
 
 
 
-@media(max-width: 425px  ){
+@media(max-width: 460px  ){
     .home ul{
         padding-left: 20px;
     }
 
+    .home img{
+        margin-right: 16px;
+    }
+
     .logo{
-        padding-left: 20px;
+        padding-left: 16px;
     }
 
     .result{
@@ -324,4 +329,5 @@ form button:hover{
         margin: 25px 25px;
     }
 }
+
 
