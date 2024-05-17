@@ -133,7 +133,7 @@ body{
 }
 
 .input button{
-    margin-top: 23px ;
+    margin-top: 12px ;
     height: 33px;
     font-size: 18px;
     background-color: #A1C3A6;
@@ -161,13 +161,15 @@ body{
     margin-bottom: 62px;
     font-size: 25px;
     border-radius: 15px;
-    padding-top: 18px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
 .result div{
-    margin: 27px 35px;
+    margin: 16px 35px;
 }
 
 #contact{
@@ -283,6 +285,7 @@ form button:hover{
     #cal{
         height: 100%;
     }
+
     .home{
         font-size: 15px;
         padding-left: 10px;
@@ -303,8 +306,9 @@ form button:hover{
         font-size: 20px;
     }
     .result div{
-        margin: 25px 25px;
+        margin: 12px 25px;
     }
+    
 }
 
 
@@ -323,11 +327,11 @@ form button:hover{
     }
 
     .result{
-        width: 300px;
+        width: 280px;
     }
 
     .result div{
-        margin: 25px 25px;
+        margin: 12px 25px;
     }
 }
 
