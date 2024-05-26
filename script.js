@@ -1,7 +1,7 @@
 function display() {
-    let tLec = document.getElementById("tLec").value;
-    let tAtt = document.getElementById("tAtt").value;
-    let rAtt = document.getElementById("rAtt").value;
+    let tLec = Number(document.getElementById("tLec").value); 
+    let tAtt = Number(document.getElementById("tAtt").value); 
+    let rAtt = Number(document.getElementById("rAtt").value);
 
     let resAtt = document.getElementById("resAtt");
     let absent = document.getElementById("absent");
