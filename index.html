@@ -12,6 +12,10 @@
     <nav class="nav">
         <div class="logo">
            <img src="img/Add a heading.png" alt=""> </div>
+        <ul id="changecal">
+            <li id="cal1" onclick="cal1()">Current Attendance</li>
+            <li id="cal2" onclick="cal2()">Projected Goals</li>
+        </ul>
         <ul class="home">
             <ul><a class="navtext" href="#cal">Home </a></ul>
             <ul><a class="navtext" href="#contact">Mail</a></ul>
@@ -20,7 +24,7 @@
     </nav>
     <main>
         <section id="cal">
-            <div class="content">
+            <div class="content" id="content">
                 <div class="input">
                     <div>Total lectures</div>
                     <div> <input type="number" id="tLec" min="1" onkeypress="return event.charCode >= 48"></div>
@@ -38,8 +42,23 @@
                     <div id="canMiss">Can miss: </div>
                     <div id="attend">Has to attend :</div>
                 </div>
-
             </div >
+
+            <div class="content2" id="content2">
+                <div class="input">
+                    <div>Total lectures</div>
+                    <div> <input type="number" id="tLec2" min="1" onkeypress="return event.charCode >= 48"></div>
+                    <div>Required attendence</div>
+                    <div class="percentageinp"> <div><input type="number" name="" id="rAtt2" value="75" min="1" max="100"> </div> <div>%</div></div>
+                    
+                    <div><button onclick="display2()">Generate</button></div>
+                </div>
+                <div class="result">
+                    <div id="canMiss2">Can miss: </div>
+                    <div id="attend2">Has to attend :</div>
+                </div>
+            </div >
+
         </section>
         <section id="contact">
             <div class="contactbox">
