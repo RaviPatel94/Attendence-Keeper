@@ -14,8 +14,6 @@ function display() {
     status.textContent='Status :';
     canmiss.textContent='Can miss:';
     Hastoattend.textContent='Has to attend :'; 
-    
-
 
     let a= (tAtt/tLec)*100;
     let attendence= a.toPrecision(2);
@@ -37,6 +35,9 @@ function display() {
             tAtt++;
             tAtt--;
             attendence = [(tAtt) / tLec] * 100;
+            console.log(tLec);
+            console.log(miss);
+            console.log(attendence);
         }
         miss-=1;
         status.textContent += 'High';
@@ -70,10 +71,41 @@ function display() {
             tAtt++;
             tAtt--;
             attendence = [(tAtt + attend) / tLec] * 100;
+            console.log(tLec);
+            console.log(attend);
+            console.log(attendence);
+    
         }
         Hastoattend.textContent+= attend+" Lectures";
         canmiss.textContent+= miss + " Lectures";
     }
 
     
+}
+
+function display2(){
+    let tLec2 = Number(document.getElementById("tLec2").value);
+    let rAtt2 = Number(document.getElementById("rAtt2").value);
+    let canmiss2 = document.getElementById("canMiss2");
+    let Hastoattend2 = document.getElementById("attend2");
+    let hastoatt2=tLec2*(rAtt2/100)
+    let miss2=tLec2-hastoatt2
+    console.log(hastoatt2, miss2)
+    canmiss2.textContent+= miss2 + " Lectures";
+    Hastoattend2.textContent+= hastoatt2+" Lectures";
+}
+
+function cal1(){
+    content=document.getElementById("content")
+    content2=document.getElementById("content2")
+    content2.style.display = "none";
+    content.style.display = "";
+}
+
+function cal2(){
+    content2=document.getElementById("content2")
+    content=document.getElementById("content")
+    content.style.display = "none";
+    content2.style.display = "flex";
+    console.log("cal2")
 }
