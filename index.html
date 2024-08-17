@@ -11,15 +11,24 @@
 <body>
     <nav class="nav">
         <div class="logo">
-           <img src="img/Add a heading.png" alt=""> </div>
+           <img src="img/Add a heading.png" alt=""> 
+        </div>
         <ul id="changecal">
             <li id="cal1" onclick="cal1()">Current Attendance</li>
             <li id="cal2" onclick="cal2()">Projected Goals</li>
         </ul>
         <ul class="home">
-            <ul><a class="navtext" href="#cal">Home </a></ul>
-            <ul><a class="navtext" href="#contact">Mail</a></ul>
-            <ul><a href="login.html"><img class="pp" src="img/pp-removebg-preview.png" alt=""></a></ul>
+            <li><a class="navtext" href="#cal">Home </a></li>
+            <li><a class="navtext" href="#contact">Mail</a></li>
+            <li  id="pfp" onclick="profopt()"> <div style="position: relative;"><img class="pp" src="img/pp-removebg-preview.png" alt="">
+                <div id="pfpopt">
+                        <p><a href="login.html">Login</a></p>
+                        <div><p>Themes</p>
+                        </div>
+                        <p><a href="https://www.linkedin.com/in/ravi-patel94/" target="_blank">Developer</a></p>
+                </div>
+                </div>
+            </li>
         </ul>
     </nav>
     <main>
