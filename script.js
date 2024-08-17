@@ -109,3 +109,8 @@ function cal2(){
     content2.style.display = "flex";
     console.log("cal2")
 }
+
+function profopt() {
+    const pfpOpt = document.getElementById('pfpopt');
+    pfpOpt.style.display = pfpOpt.style.display === 'block' ? 'none' : 'block';
+}
