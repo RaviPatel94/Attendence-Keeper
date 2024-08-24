@@ -1,433 +1,102 @@
-*{
-    scroll-behavior: smooth;
-}
-ul{
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Keeper</title>
+    <link rel="stylesheet" href="index.css">
+</head>
 
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    
-}
+<body>
+    <nav class="nav">
+        <div class="logo">
+           <img src="img/Add a heading.png" alt=""> 
+        </div>
+        <ul id="changecal">
+            <li id="cal1" onclick="cal1()">Current attendence</li>
+            <li id="cal2" onclick="cal2()">Projected goals</li>
+        </ul>
+        <ul class="home">
+            <li><a class="navtext" href="#cal">Home </a></li>
+            <li><a class="navtext" href="#contact">Mail</a></li>
+            <li  id="pfp" onclick="profopt()"> <div style="position: relative;"><img class="pp" src="img/pp-removebg-preview.png" alt="">
 
-#cal{
-    border-bottom: #29983B;
-    border-bottom-style: solid;
-    margin-bottom: 10px ;
-    border-bottom-width: 1px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav{
-    display: flex;
-    background-color: #A1C3A6; 
-    align-items: center;
-    justify-content: space-between;
-    border-bottom-color: #29983B;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    flex-wrap:nowrap ;
-    object-fit: cover;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    
-}
+                <div id="pfpopt">
+                        <p><a href="login.html">Login</a></p>
+                        <div><p id="themes" onclick="themeopt()">Themes</p>
+                        </div>
+                        <p><a href="https://www.linkedin.com/in/ravi-patel94/" target="_blank">Developer</a></p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="cal">
+            <div class="content" id="content">
+                <div class="input">
+                    <div>Total lectures</div>
+                    <div> <input type="number" id="tLec" min="1" onkeypress="return event.charCode >= 48"></div>
+                    <div>Total attended</div>
+                    <div><input type="number" id="tAtt" min="1" onkeypress="return event.charCode >= 48"></div>
+                    <div>Required attendence</div>
+                    <div class="percentageinp"> <div><input type="number" name="" id="rAtt" value="75" min="1" max="100"> </div> <div>%</div></div>
+                    
+                    <div><button onclick="display()">Generate</button></div>
+                </div>
+                <div class="result">
+                    <div id="resAtt">Attendence : </div>
+                    <div id="absent"> Absent : </div>
+                    <div id="status">Status : </div>
+                    <div id="canMiss">Can miss: </div>
+                    <div id="attend">Has to attend :</div>
+                </div>
+            </div >
 
-#changecal{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-}
+            <div class="content2" id="content2">
+                <div class="input">
+                    <div>Total lectures</div>
+                    <div> <input type="number" id="tLec2" min="1" onkeypress="return event.charCode >= 48"></div>
+                    <div>Required attendence</div>
+                    <div class="percentageinp"> <div><input type="number" name="" id="rAtt2" value="75" min="1" max="100"> </div> <div>%</div></div>
+                    
+                    <div><button onclick="display2()">Generate</button></div>
+                </div>
+                <div class="result">
+                    <div id="canMiss2">Can miss: </div>
+                    <div id="attend2">Has to attend :</div>
+                </div>
+            </div >
 
-ul{
-    margin: 0;
-}
-#pfp{
-    position: relative;
-}
+        </section>
+        <section id="contact">
+            <div class="contactbox">
+            <div>
+                <img src="img/call.jpg" alt="">
+            </div>
+            <div class="contactinp">
+            <div>
+                <p> Contact Me! </p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-#changecal li{
-    list-style-type: none;
-    border: #000000;
-    border-width: 0px;
-    padding: 5px 20px;
-    border-radius: 15px;
-    color: #000000;
-    border-style: solid;
-    cursor: pointer;
-    padding: 5px 6px;
-    width: max-content;
-}
+                <input type="hidden" name="access_key" value="f452ef1d-ac63-4571-a65a-ba9e3eb41901">
+                <input type="text" name="name" placeholder="Your Name" required class="info">
+                <input type="email" name="email" placeholder="Your Email" class="info" >
+                <textarea name="message" required placeholder="Message" class="info"></textarea>
+            
+                <button type="submit" class="info">Send Mail</button>
+            
+            </form>
+        </div>
+    </div>
+        <div class="linkedin">
+            Made By <a href="https://www.linkedin.com/in/ravi-patel94" target="_blank">Ravi Patel</a>, <a href="https://github.com/RaviPatel94" target="_blank">Github</a>
+        </div>
+        </section>
+    </main>
 
-#changecal li:hover{
-    background-color:#08741a;
-    transition: 0.35s;
-    color: white;
-}
+    <script src="script.js"></script>
+</body>
 
-#pfpopt{
-    display: none;
-    z-index: 100;
-    position: absolute;
-    width:150px; 
-    border-width:2px; 
-    border-style:solid; 
-    padding: 3px 13px; 
-    right:0; 
-    top:45px; 
-    background-color:white;
-}
-
-#themeopt{
-    z-index: 101;
-    position: absolute;
-    width:150px; 
-    border-width:2px; 
-    border-style:solid; 
-    padding: 3px 13px; 
-    right: 35px; 
-    top:0px; 
-    background-color:white;
-}
-
-.logo{
-    display: flex;
-    padding-left: 30px;
-    max-width: 30%;
-    min-width: 10%;
-}
-
-.logo img{
-    height: 55px;
-}
-
-.home{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin: 0;
-    font-size: 20px;
-    max-width: 30%;
-    min-width: 15%;
-    gap: 20px;
-    list-style-type: none;
-}
-
-#pfpopt p{
-    margin-top: 12px;
-    margin-bottom: px;
-    cursor: pointer;
-}
-
-
-.nav ul a{
-    text-decoration: none;
-    color: black;
-}
-
-.navtext {
-    position: relative;
-    text-decoration: none;
-  }
-  
-.navtext:hover::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    bottom: 0;
-    border: 1px solid black;
-  }
-
-.home img{
-    margin: 0;
-    padding:0;
-    height: 40px; 
-    margin-right: 40px;
-    border-radius: 50%;
-    margin-top: 3px;
-    cursor: pointer;
-}
-
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content2{
-    display: flex;
-    justify-content: center;
-    display: none;
-    
-}
-
-.input{
-    /* margin-top:60px; */
-    padding-top: 30px;
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-    
-}
-
-.input div{
-    width: 100%;
-    display: flex;
-}
-
-.input input{
-    margin: 0;
-    height: 29px;
-    width: 200px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border-radius: 9px;
-    border-style: solid;
-    border-width: 1px;
-    min-width: 80px;
-}
-
-.percentageinp{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 27px;
-}
-
-.input button{
-    margin-top: 12px ;
-    height: 33px;
-    font-size: 18px;
-    background-color: #A1C3A6;
-    border-color: #29983B;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.input button:hover{
-    color: #ffffff;
-    background-color:  #29983B;
-    border-color: #A1C3A6;
-    transition: 0.2s;
-}
-
-.result{
-    border-color: #29983B;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #A1C3A6;
-    margin-top:80px;
-    margin-left: 90px;
-    margin-bottom: 62px;
-    font-size: 25px;
-    border-radius: 15px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
-.result div{
-    margin: 16px 35px;
-}
-
-#contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactbox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactinp{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 90px;
-    margin-right: 30px;
- 
-}
-
-#contact img{
-    height: 350px;
-
-}
-
-#contact p{
-    font-size: 40px;
-    display: flex;
-    margin-bottom: 32px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input{
-    margin-bottom: 16px;
-    margin-top: 5px;
-    width: 240px;
-    height: 32px;
-    border-radius: 9px;
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    font-size: 15px;
-    padding-left: 10px;
-    margin-top: 2px;
-}
-
-form textarea{
-    height: 100px;
-    width: 240px;
-    display: block;
-    margin-bottom: 40px;
-    font-size: 15px;
-    padding-left: 10px;
-    padding-top: 5px;
-}
-
-form button{
-    width: 140px;
-    display: block;
-    margin-bottom: 35px;
-    height: 36px;
-    font-size: 18px;
-    background-color: #A1C3A6;
-    border-color: #29983B;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.linkedin{
-    margin-bottom: 15px;
-}
-
-form button:hover{
-    color: #ffffff;
-    background-color:  #29983B;
-    border-color: #A1C3A6;
-    transition: 0.2s;
-}
-
-@media(max-width:740px ){
-    .contactbox{
-        flex-direction: column;
-    }
-    .contactinp{
-        margin: 0;
-    }
-    .content{
-        flex-direction: column;
-        align-items: center;
-    }
-    .content2{
-        flex-direction: column;
-        align-items: center;
-    }
-    .result{
-        margin-left: 0px;
-        font-size: 16px;
-        width: 330px;
-        margin-top: 60px;
-    }
-    #contact img{
-        height: 300px;
-    }
-    #cal{
-        height: 100%;
-    }
-
-    #changecal{
-        font-size: 15px;
-    }
-
-    .home{
-        font-size: 15px;
-        padding-left: 10px;
-    }
-    .input{
-        font-size: 20px;
-        margin-top: 64px;
-    }
-
-
-
-    #contact p{
-        font-size: 35px;
-    }
-    .logo img{
-        height: 40px;
-    }
-    
-    .result{
-        font-size: 20px;
-    }
-    .result div{
-        margin: 12px 25px;
-    }
-    
-}
-
-@media(max-width: 460px  ){
-    .home ul{
-        padding-left: 20px;
-    }
-
-    .home img{
-        margin-right: 16px;
-    }
-
-    .logo{
-        padding-left: 16px;
-    }
-
-    .result{
-        width: 280px;
-    }
-
-    .result div{
-        margin: 12px 25px;
-    }
-    #changecal{
-        gap: 5px;
-    }
-}
-
+</html>
