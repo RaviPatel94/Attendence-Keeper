@@ -77,10 +77,11 @@ ul{
     border-style: solid;
     cursor: pointer;
     padding: 5px 6px;
+    width: max-content;
 }
 
 #changecal li:hover{
-    background-color:#29983B;
+    background-color:#08741a;
     transition: 0.35s;
     color: white;
 }
@@ -95,6 +96,18 @@ ul{
     padding: 3px 13px; 
     right:0; 
     top:45px; 
+    background-color:white;
+}
+
+#themeopt{
+    z-index: 101;
+    position: absolute;
+    width:150px; 
+    border-width:2px; 
+    border-style:solid; 
+    padding: 3px 13px; 
+    right: 35px; 
+    top:0px; 
     background-color:white;
 }
 
@@ -126,6 +139,7 @@ ul{
     margin-bottom: px;
     cursor: pointer;
 }
+
 
 .nav ul a{
     text-decoration: none;
@@ -374,6 +388,8 @@ form button:hover{
         margin-top: 64px;
     }
 
+
+
     #contact p{
         font-size: 35px;
     }
@@ -409,6 +425,9 @@ form button:hover{
 
     .result div{
         margin: 12px 25px;
+    }
+    #changecal{
+        gap: 5px;
     }
 }
 
