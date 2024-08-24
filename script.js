@@ -117,16 +117,3 @@ function profopt() {
     pfpOpt.style.display = pfpOpt.style.display === 'block' ? 'none' : 'block';
 }
 
-function themeopt(){
-    const pfpOpt = document.getElementById('pfpopt');
-    pfpOpt.id="pfp"
-    pfpOpt.innerHTML=`
-    <div id="themeopt">
-        <p>Blue</p>
-        <p>Brown</p>
-        <p>Green</p>
-        <p>Grey</p>
-        <p onclick="back()">Back</p>
-    </div>
-    `
-}
