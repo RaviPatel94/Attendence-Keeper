@@ -88,8 +88,10 @@ function display2(){
     let rAtt2 = Number(document.getElementById("rAtt2").value);
     let canmiss2 = document.getElementById("canMiss2");
     let Hastoattend2 = document.getElementById("attend2");
-    let hastoatt2=tLec2*(rAtt2/100)
-    let miss2=tLec2-hastoatt2
+    canmiss2.textContent="Can miss:";
+    Hastoattend2.textContent= "Has to attend:";
+    let hastoatt2=Math.ceil(tLec2*(rAtt2/100))
+    let miss2=Math.floor(tLec2-hastoatt2)
     console.log(hastoatt2, miss2)
     canmiss2.textContent+= miss2 + " Lectures";
     Hastoattend2.textContent+= hastoatt2+" Lectures";
@@ -113,4 +115,18 @@ function cal2(){
 function profopt() {
     const pfpOpt = document.getElementById('pfpopt');
     pfpOpt.style.display = pfpOpt.style.display === 'block' ? 'none' : 'block';
+}
+
+function themeopt(){
+    const pfpOpt = document.getElementById('pfpopt');
+    pfpOpt.id="pfp"
+    pfpOpt.innerHTML=`
+    <div id="themeopt">
+        <p>Blue</p>
+        <p>Brown</p>
+        <p>Green</p>
+        <p>Grey</p>
+        <p onclick="back()">Back</p>
+    </div>
+    `
 }
